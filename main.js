@@ -205,14 +205,14 @@ function beg(i){
 
  setTimeout(function() {beg(0);}, 500);
 
-var btn = document.getElementById("skip");
+/*var btn = document.getElementById("skip");
 
 btn.addEventListener("mouseover", function() {
   this.textContent = "Skip";
 })
 btn.addEventListener("mouseout", function() {
   this.textContent = ">";
-})
+})*/
 
 function skip(){
 	document.getElementById("head").id = "heads";
