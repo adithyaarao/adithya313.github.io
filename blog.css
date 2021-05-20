@@ -1,0 +1,31 @@
+.blog{
+	border-radius: 10px;
+	border: 2px solid black;
+	width: 60%;
+	overflow: hidden;
+	margin-left: 18%;
+	padding: 1%;
+}
+
+
+.tit{
+	font-weight: bold;
+}
+
+.meimg{
+	float: left;
+	display: grid;
+	grid-template-columns: 1.25fr 0.75fr;
+}
+
+.img{
+	width: 150%;
+}
+
+.image{
+	width: 25%;
+}
+
+.meta{
+
+}
