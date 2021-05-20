@@ -2,7 +2,7 @@ function scrollheader(){
 window.addEventListener("scroll", (event) => {
     scroly = this.scrollY;
     elems = document.getElementsByClassName('hb');
-    if(scroly > 100){
+    if(scroly > 150){
     	document.getElementById('header').style.background = "white";
     	for(i=0; i<elems.length; i++){
     		elems[i].style.color = "black";
