@@ -18,8 +18,9 @@ function destroy(){
 	document.body.style.fontFamily = "Helvetica"
 	//document.getElementById("header").scrollIntoView();
 	//createfluid();
-
+	setTimeout(function(){scrollheader();}, 1500);
 	listenscroll();
+	window.scrollTo(0, 0);
 	document.getElementById("header").style.position = "fixed";
 	document.getElementById("header").style.top = "0vh";
 	document.getElementById("header").style.right = "0vh";
