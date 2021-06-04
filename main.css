@@ -63,6 +63,7 @@ html {
   box-shadow: 0px 0px 20px blue;
   background:linear-gradient(#00ff00,#09f,#09f);
     background: linear-gradient(to right, #00467f, #a5cc82);
+    background-color: blue;
     background-image: url('earth.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
