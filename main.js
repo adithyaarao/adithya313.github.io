@@ -1,5 +1,12 @@
 /*Intro animation JS*/
 
+
+var bg1 = 'typing2.gif';
+var bg2 = 'space.gif';
+var element = document.getElementById('top');
+let image = document.createElement("img");
+image.src = bg1;
+
 var txt = '';
 
 var s1 = 'Hi,';
@@ -13,27 +20,30 @@ var s5 = 'But I also love fiddling with coding and have fun...';
 
 var heart = '&hearts;'
 
-function destroy(){
+/*function destroy(){
 	document.body.style.background = 'white';
 	document.body.style.fontFamily = "Helvetica"
 	//document.getElementById("header").scrollIntoView();
 	//createfluid();
-	setTimeout(function(){scrollheader();}, 1500);
-	listenscroll();
 	window.scrollTo(0, 0);
+	listenscroll();
+	setTimeout(function(){scrollheader();}, 1500);
 	document.getElementById("header").style.position = "fixed";
 	document.getElementById("header").style.top = "0vh";
 	document.getElementById("header").style.right = "0vh";
 	document.getElementById("top").remove();
 	document.getElementById("middiv").remove();
 	document.getElementById("circle").remove();
-	window.scrollTo(0, 0);
+}*/
+
+function destroy(){
+	window.location.href = 'home.html';
 }
 
 function circle(){
 	var elem = document.getElementById("circle");
-	elem.style.width='150vw';
-	elem.style.height='150vw';
+	elem.style.width='50000vw';
+	elem.style.height='50000vw';
 	setTimeout(function() {destroy();}, 1000);
 }
 
@@ -262,10 +272,6 @@ function beg(i){
 
 }
 
-
-document.getElementById('top').scrollIntoView();
-setTimeout(function() {beg(0);}, 500);
-
 /*var btn = document.getElementById("skip");
 
 btn.addEventListener("mouseover", function() {
@@ -286,3 +292,15 @@ function skip(){
 	document.getElementById("skip").remove();
 	circle();
 }
+
+function done(){
+	document.getElementById('loading').style.opacity = '0';
+	document.getElementById('top').scrollIntoView();
+	setTimeout(function() {beg(0);}, 500);
+
+}
+
+image.addEventListener('load', (event)=> {
+  element.style.backgroundImage = `url(${bg1})`;
+  done();});
+
