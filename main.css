@@ -22,9 +22,20 @@ html {
 	top: -5vh;
 	right: -5vh;
 	background: rgb(254,255,0);
-	background: linear-gradient(135deg, rgba(254,255,0,1) 10%, rgba(0,0,0,1) 65%);
+	background: linear-gradient(135deg, rgba(254,255,0,1) 18%, rgba(0,0,0,1) 75%);
 	justify-content: center;
 	align-content: center;
+	transition: all 1s;
+}
+
+.sun{
+	position: absolute;
+	width: 800px;
+	height: 800px;
+	left: -400px;
+	top: -400px;
+	border-radius: 50%;
+	background-color: orange;
 }
 
 .orbit{
@@ -54,18 +65,20 @@ html {
     background-image: url('earth.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
+    -webkit-animation: rotation 20s infinite linear;
+  animation: rotation 10s infinite linear;
 }
 
 .moon{
 	position:absolute;
 	z-index:100;
   border-radius:50%;
-  background-color: white;
+  background: linear-gradient(120deg, white 40%, black 70%);
   left: 45px;
   height:20px;
   width:20px;
-  -webkit-animation: rotation 1s infinite linear;
-  animation: rotation 1s infinite linear;
+  -webkit-animation: rotation1 2s infinite linear;
+  animation: rotation1 2s infinite linear;
 }
 
  @-webkit-keyframes rotation {
@@ -85,6 +98,36 @@ html {
 		}
     }
 
+ @-webkit-keyframes rotation1 {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(-359deg);
+		}
+    }
+    @keyframes rotation1 {
+		from {
+				transform: rotate(0deg);
+		}
+		to {
+				transform: rotate(-359deg);
+		}
+    }
+
+@keyframes fluctuate {
+	from {
+		background: linear-gradient(135deg, rgba(254,255,0,1) 10%, rgba(0,0,0,1) 65%);
+	}
+	to{
+		from {
+		background: linear-gradient(135deg, rgba(254,255,0,1) 15%, rgba(0,0,0,1) 70%);
+	}
+	to{
+		background: linear-gradient(135deg, rgba(254,255,0,1) 20%, rgba(0,0,0,1) 75%);
+	}
+	}
+}
 
 h1{
 	font-size: 100px;
@@ -231,17 +274,3 @@ section{
 	height: 1vh;
 	transition: all 1s;
 }
-
-  @keyframes .top {
-    0% {
-      background-image: filter(typing2.gif), blur(20px));
-      opacity:0;
-    }
-    50% {
-      opacity:0;
-    }
-    100% {
-      background-image: filter(typing2.gif), blur(0px));
-      opacity:1;
-    }
-  }
