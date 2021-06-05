@@ -2,11 +2,38 @@ body{
 	overflow-x: hidden ;
 	height: 200vh;
 }
+
+
+.custom-shape-divider-bottom-1622854535 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1622854535 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 250px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1622854535 .shape-fill {
+    fill: #f2f2f2;
+}
+
+
+
 .header{
 	content: "";
 	width: 120vw;
 	height: 70px;
 	background: black;
+	background: transparent;
 	position: fixed;
 	top:  0vh;
 	right: 0vh;
@@ -28,35 +55,38 @@ body{
 	margin-left: 1.5%;
 	background-color: transparent;
 	font-weight: normal;
-	color:#ccc;
+	color:#f5f5f5;
 	font-size: 1em;
-	border: 2px solid #ccc;
+	border: 2px solid #f5f5f5;
 	transition: all 0.2s;
 }
 
 .hb:hover {
 	background-color: black;
-	color: #ccc!important;
+	color: #f5f5f5!important;
 }
 
 .fluidcont{
 	height: 760px;
-	background-color: #ccc;
+	position: relative;
+	top: -25px;
+	background-color: #f5f5f5;
 }
 
 .fluid{
 	width: 110%;
-	height: 600px;
-	height: 95vh;
+	height: 105vh;
 	float:left;
 	position: relative;
 	left: -15px;
-	background-color:black;
+	background-image: radial-gradient(circle at 99% 33%, hsla(235,0%,48%,0.03) 0%, hsla(235,0%,48%,0.03) 37%,transparent 37%, transparent 100%),radial-gradient(circle at 46% 16%, hsla(235,0%,48%,0.03) 0%, hsla(235,0%,48%,0.03) 43%,transparent 43%, transparent 100%),radial-gradient(circle at 99% 25%, hsla(235,0%,48%,0.03) 0%, hsla(235,0%,48%,0.03) 22%,transparent 22%, transparent 100%),radial-gradient(circle at 57% 88%, hsla(235,0%,48%,0.03) 0%, hsla(235,0%,48%,0.03) 86%,transparent 86%, transparent 100%),radial-gradient(circle at 82% 78%, hsla(235,0%,48%,0.03) 0%, hsla(235,0%,48%,0.03) 22%,transparent 22%, transparent 100%),linear-gradient(90deg, rgb(0,0,0),rgb(0,0,0));;
+	background-image: linear-gradient(66deg, transparent 0%, transparent 24%,rgba(195, 195, 195,0.04) 24%, rgba(195, 195, 195,0.04) 80%,transparent 80%, transparent 100%),linear-gradient(153deg, transparent 0%, transparent 29%,rgba(195, 195, 195,0.04) 29%, rgba(195, 195, 195,0.04) 45%,transparent 45%, transparent 100%),linear-gradient(199deg, transparent 0%, transparent 32%,rgba(195, 195, 195,0.04) 32%, rgba(195, 195, 195,0.04) 59%,transparent 59%, transparent 100%),linear-gradient(277deg, transparent 0%, transparent 56%,rgba(195, 195, 195,0.04) 56%, rgba(195, 195, 195,0.04) 57%,transparent 57%, transparent 100%),linear-gradient(90deg, rgb(0,0,0),rgb(0,0,0));
+	background-image: radial-gradient(circle at 99% 33%, rgba(187,187,187, 0.06) 0%, rgba(187,187,187, 0.06) 37%,transparent 37%, transparent 100%),radial-gradient(circle at 46% 16%, rgba(187,187,187, 0.06) 0%, rgba(187,187,187, 0.06) 43%,transparent 43%, transparent 100%),radial-gradient(circle at 99% 25%, rgba(187,187,187, 0.06) 0%, rgba(187,187,187, 0.06) 22%,transparent 22%, transparent 100%),radial-gradient(circle at 57% 88%, rgba(187,187,187, 0.06) 0%, rgba(187,187,187, 0.06) 86%,transparent 86%, transparent 100%),radial-gradient(circle at 82% 78%, rgba(187,187,187, 0.06) 0%, rgba(187,187,187, 0.06) 22%,transparent 22%, transparent 100%),linear-gradient(90deg, rgb(0,0,0),rgb(0,0,0));
 	display: flex;
 	/*border-radius: 16% 0% 45% 55% / 0% 0% 18% 69% ;*/
 	/*border-radius: 0% 0% 80% 100% / 0% 0% 30% 100% ;*/
 	/*border-radius: 0% 0% 49% 94% / 0% 0% 20% 100% ;*/
-	border-radius: 0% 0% 33% 67% / 0% 0% 14% 100% ;
+	/*border-radius: 0% 0% 33% 67% / 0% 0% 14% 100% ;*/
 	justify-content: flex-end;
 }
 
@@ -65,20 +95,34 @@ body{
 	margin-right: 10%; 
 	width: 50%;
 	height: 50%;
-	color:#ccc;
+	color:white;
 	position: relative;
-	top: -5%;
+	top: -10px;
 	font-size: 4em;
 	overflow: hidden;
 	font-family: Tangerine;
 }
 
-.leftc{
-	border-radius: 50%;
-	width: 600px;
-	height: 600px;
-	background-color: #99a3ff;
-	position: relative;
-	left: -600px;
-	opacity: 1;
+
+.bottom{
+	height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

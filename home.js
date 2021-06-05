@@ -3,33 +3,32 @@ window.addEventListener("scroll", (event) => {
     scroly = this.scrollY;
     elems = document.getElementsByClassName('hb');
     if(scroly > 100){
-    	document.getElementById('header').style.background = "#ccc";
+    	document.getElementById('header').style.background = "#f5f5f5";
     	for(i=0; i<elems.length; i++){
     		elems[i].style.color = "black";
     		elems[i].style.border = "2px solid black";
     	}
     }
     else{
-    	document.getElementById('header').style.background = "black";
+    	document.getElementById('header').style.background = "transparent";
     	for(i=0; i<elems.length; i++){
-    		elems[i].style.color = "#ccc";
-    		elems[i].style.border = "2px solid #ccc";
+    		elems[i].style.color = "#f5f5f5";
+    		elems[i].style.border = "2px solid #f5f5f5";
     	}
     }
 
-    leftc = document.getElementById('leftc');
-    leftc.style.left = 2*scroly - 600 + "px";
-    leftc.style.opacity = scroly/600;
+   
 });
 }
 
 function listenscroll(){
     window.addEventListener("scroll", (event) => {
     scroly = this.scrollY;
-    leftc = document.getElementById('leftc');
-    leftc.style.left = scroly - 600 + "px";
-    leftc.style.opacity = scroly/600;
+    txt = document.getElementById("fluidtxt");
+    txt.style.top = -scroly/1.75 -10 + "px";
+    txt.style.opacity = 1.2- scroly/100;
 });
+
 }
 scrollheader();
 listenscroll();

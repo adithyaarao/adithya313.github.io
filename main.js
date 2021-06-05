@@ -1,7 +1,7 @@
 /*Intro animation JS*/
 
 
-var bg1 = 'typing2.gif';
+var bg1 = 'bg1.gif';
 var bg2 = 'space.gif';
 var element = document.getElementById('top');
 let image = document.createElement("img");
@@ -41,6 +41,7 @@ function destroy(){
 }
 
 function circle(){
+	document.getElementById('loading').style.opacity = '1';
 	var elem = document.getElementById("circle");
 	elem.style.width='50000vw';
 	elem.style.height='50000vw';
