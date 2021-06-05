@@ -3,9 +3,9 @@
 
 var bg1 = 'bg1.gif';
 var bg2 = 'space.gif';
-var element = document.getElementById('top');
+var element = document.getElementById('mid');
 let image = document.createElement("img");
-image.src = bg1;
+image.src = bg2;
 
 var txt = '';
 
@@ -300,6 +300,6 @@ function done(){
 }
 
 image.addEventListener('load', (event)=> {
-  element.style.backgroundImage = `url(${bg1})`;
+  element.style.backgroundImage = `url(${bg2})`;
   done();});
 
