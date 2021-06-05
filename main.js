@@ -42,9 +42,6 @@ function destroy(){
 
 function circle(){
 	document.getElementById('loading').style.opacity = '1';
-	var elem = document.getElementById("circle");
-	elem.style.width='50000vw';
-	elem.style.height='50000vw';
 	setTimeout(function() {destroy();}, 1000);
 }
 
