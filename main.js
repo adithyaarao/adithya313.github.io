@@ -41,6 +41,7 @@ function destroy(){
 }
 
 function circle(){
+	document.getElementById('loading').scrollIntoView()
 	document.getElementById('loading').style.opacity = '1';
 	setTimeout(function() {destroy();}, 1000);
 }
