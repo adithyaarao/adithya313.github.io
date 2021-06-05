@@ -3,7 +3,7 @@
 
 var bg1 = 'bg1.gif';
 var bg2 = 'space.gif';
-var element = document.getElementById('mid');
+var element = document.getElementById('middiv');
 let image = document.createElement("img");
 image.src = bg2;
 
