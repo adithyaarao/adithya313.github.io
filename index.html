@@ -3,6 +3,7 @@
 <head>
 	<title>Home | Adithya</title>
 	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="loading.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=BioRhyme">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
@@ -10,13 +11,17 @@
 <body bgcolor="black" style="overflow: hidden;">
 	<div class="circle" id="circle"></div>
 	<div class="loadingcont" id="loading">
-		<div class="sun"></div>
 		<div class="holder">
+			<div class="sun"></div>
+			<div class="orbit merc"><div class="mercury"></div></div>
+			<div class="orbit ven"><div class="venus"></div></div>
+			<div class="orbit e">
 		<div class="earth"></div>
-		<div class="orbit">
+		<div class="orbit m">
 			<div class="moon"></div>
 		</div>
 		</div>
+	</div>
 	</div>
 	<button id="skip" class = "skip" onclick = skip() data-hover = "Skip" ><span id="radio" class="bf"> &nbsp&gt </span><span class="af">Skip</span></button>
 	<section class="top" id="top">
