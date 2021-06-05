@@ -1,0 +1,177 @@
+.holder{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	background-color: transparent;
+}
+
+.loadingcont{
+	position: absolute;
+	height: 105vh;
+	width: 105vw;
+	top: -5vh;
+	right: -5vh;
+	/*background: rgb(254,255,0);
+	background: linear-gradient(135deg, rgba(254,255,0,1) 18%, rgba(0,0,0,1) 75%);*/
+	justify-content: center;
+	align-content: center;
+	transition: all 1s;
+	animation: fluctuate 0.000s infinite linear;
+}
+
+.sun{
+	width: 150px;
+	height: 150px;
+	position: relative;
+	top: -70px;
+	bottom: 0;
+	left: -70px;
+	right: 0;
+	border-radius: 50%;
+	box-shadow: 0px 0px 100px orange;
+	background-image: url('sun.png');
+	 background-position: center;
+	 background-repeat: no-repeat;
+	 background-size: 110%;
+	 -webkit-animation: rotation 50s infinite linear;
+	 animation: rotation 50s infinite linear;
+}
+
+.orbit{
+	background:transparent;
+  border-radius:50%;
+  border:1px solid #fff;
+  position:relative;
+}
+
+.merc {
+	left:-97px;
+  top:-247px;
+  height:200px;
+  width:200px;
+    -webkit-animation: rotation 1.5s infinite linear;
+  animation: rotation 1.5s infinite linear;
+}
+
+.mercury{
+	position:absolute;
+	z-index:100;
+  border-radius:50%;
+  background-color: yellow;
+  box-shadow: 0px 0px 20px yellow;
+  left: 55px;
+  top: -5px;
+  height:20px;
+  width:20px;
+  -webkit-animation: rotation1 0.5s infinite linear;
+  animation: rotation1 0.5s infinite linear;
+}
+
+.ven{
+	left:-128px;
+  top:-480px;
+  height:265px;
+  width:265px;
+    -webkit-animation: rotation 2s infinite linear;
+  animation: rotation 2s infinite linear;
+}
+
+.venus{
+	position:absolute;
+	z-index:100;
+  border-radius:50%;
+  box-shadow: 0px 0px 20px red;
+  background: linear-gradient(-30deg, yellow 40%, orange 50%, red 70%);
+  left: 65px;
+  top: 0px;
+  height:20px;
+  width:20px;
+}
+
+.e{
+	left:-220px;
+  top:-835px;
+  height:450px;
+  width:450px;
+    -webkit-animation: rotation 3s infinite linear;
+  animation: rotation 3s infinite linear;
+}
+
+.m{
+  left:8px;
+  top:-35px;
+  height:100px;
+  width:100px;
+    -webkit-animation: rotation 2s infinite linear;
+  animation: rotation 2s infinite linear;
+}
+
+.earth{
+	height:50px;
+  width:50px;
+  border-radius:50%;
+  position:relative;
+  left:35px;
+  right:0;
+  top:40px;
+  bottom:0;
+  box-shadow: 0px 0px 30px blue;
+  background:linear-gradient(#00ff00,#09f,#09f);
+    background: linear-gradient(to right, #00467f, #a5cc82);
+    background-image: url('earth.jpg');
+    background-repeat: no-repeat;
+    background-size: 120%;
+    background-position: center;
+    -webkit-animation: rotation 1s infinite linear;
+  animation: rotation 1s infinite linear;
+}
+
+.moon{
+	position:absolute;
+	z-index:100;
+  border-radius:50%;
+  box-shadow: 0px 0px 10px white;
+  background: linear-gradient(-60deg, white 40%, black 70%);
+  left: 45px;
+  top: -5px;
+  height:10px;
+  width:10px;
+  -webkit-animation: rotation1 2s infinite linear;
+  animation: rotation1 2s infinite linear;
+}
+
+
+ @-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
+    }
+    @keyframes rotation {
+		from {
+				transform: rotate(0deg);
+		}
+		to {
+				transform: rotate(359deg);
+		}
+    }
+
+ @-webkit-keyframes rotation1 {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(-359deg);
+		}
+    }
+    @keyframes rotation1 {
+		from {
+				transform: rotate(0deg);
+		}
+		to {
+				transform: rotate(-359deg);
+		}
+    }
+    
