@@ -15,7 +15,6 @@
 	background: linear-gradient(135deg, rgba(254,255,0,1) 18%, rgba(0,0,0,1) 75%);*/
 	justify-content: center;
 	align-content: center;
-	transition: all 1s;
 	animation: fluctuate 0.000s infinite linear;
 }
 
