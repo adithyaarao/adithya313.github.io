@@ -120,6 +120,7 @@ section{
 }
 
 .top{
+	background-image: url('bg1.gif');
 	background-attachment: fixed;
 	background-position: center;
   	background-repeat: no-repeat;
