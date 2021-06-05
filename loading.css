@@ -22,6 +22,7 @@ svg{
 	right: -5vh;
 	/*background: rgb(254,255,0);
 	background: linear-gradient(135deg, rgba(254,255,0,1) 18%, rgba(0,0,0,1) 75%);*/
+	background: black;
 	justify-content: center;
 	align-content: center;
 	animation: fluctuate 0.000s infinite linear;
