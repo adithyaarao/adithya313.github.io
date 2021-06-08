@@ -28,7 +28,6 @@ body{
 }
 
 .outcircblack{
-	background-color: rgba(0, 0, 0, 0.1) !important;
 	border:0.5px solid black !important;	
 }
 
@@ -38,7 +37,7 @@ body{
 	height: 75px;
 	border-radius: 50%;
 	opacity: 0.8;
-	background-color: rgba(255, 255, 255, 0.1);
+	background-color: transparent;
 	border: 0.5px solid white;
 	z-index: 9998;
   transform:translate(-50%,-50%);
