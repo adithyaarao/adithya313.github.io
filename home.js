@@ -30,6 +30,13 @@ function scrollheader(){
 window.addEventListener("scroll", (event) => {  
 
     scroly = this.scrollY;
+    if(scroly<10){
+        document.getElementById('holder').style.opacity = 0;
+    }
+    else{
+        document.getElementById('holder').style.opacity = 1;
+    }
+    
     elems = document.getElementsByClassName('hb');
     if(scroly > 100){
         document.getElementById('header').setAttribute("class", "headerhover");
