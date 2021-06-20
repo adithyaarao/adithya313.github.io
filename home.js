@@ -1,3 +1,25 @@
+function changein(){
+    document.getElementById('incircle').style.width = '32px';
+    document.getElementById('incircle').style.height = '32px';
+    document.getElementById('outcircle').style.height = '30px';
+    document.getElementById('outcircle').style.width = '30px';
+}
+
+
+function changeout(){
+    document.getElementById('incircle').style.width = '10px';
+    document.getElementById('incircle').style.height = '10px';
+    document.getElementById('outcircle').style.height = '50px';
+    document.getElementById('outcircle').style.width = '50px';
+}
+
+
+var hb = document.getElementsByClassName('hb');
+for(i=0;i<hb.length;i++){
+    hb[i].addEventListener('mouseenter', function(e){changein();});
+    hb[i].addEventListener('mouseleave', function(e){changeout();});
+}
+
 function setouter(x,y){
     document.getElementById("outcircle").style.left = x + "px";
     document.getElementById("outcircle").style.top = y + "px";   
@@ -30,15 +52,9 @@ function scrollheader(){
 window.addEventListener("scroll", (event) => {  
 
     scroly = this.scrollY;
-    if(scroly<100){
-        document.getElementById('holder').style.opacity = 0;
-    }
-    else{
-        document.getElementById('holder').style.opacity = 1;
-    }
-    
     elems = document.getElementsByClassName('hb');
     if(scroly > 100){
+        document.getElementById('holder').style.opacity = 1;
         document.getElementById('header').setAttribute("class", "headerhover");
     	document.getElementById('header').style.background = "#f5f5f5";
     	for(i=0; i<elems.length; i++){
@@ -47,6 +63,7 @@ window.addEventListener("scroll", (event) => {
     	}
     }
     else{
+        document.getElementById('holder').style.opacity = 0;
         document.getElementById('header').setAttribute("class", "header");
     	document.getElementById('header').style.background = "transparent";
     	for(i=0; i<elems.length; i++){
