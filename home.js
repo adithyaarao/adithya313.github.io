@@ -38,8 +38,6 @@ window.addEventListener("scroll", (event) => {
     		elems[i].style.color = "black";
     		elems[i].style.border = "2px solid black";
     	}
-        document.getElementById('incircle').setAttribute("class", "incircle circblack");
-        document.getElementById('outcircle').setAttribute("class", "outcircle outcircblack");
     }
     else{
         document.getElementById('header').setAttribute("class", "header");
@@ -48,8 +46,6 @@ window.addEventListener("scroll", (event) => {
     		elems[i].style.color = "#f5f5f5";
     		elems[i].style.border = "2px solid #f5f5f5";
     	}
-        document.getElementById('incircle').setAttribute("class", "incircle");
-        document.getElementById('outcircle').setAttribute("class", "outcircle");
     }
 
     if(scroly>150){
@@ -74,6 +70,7 @@ window.addEventListener("scroll", (event) => {
     if(scroly>750){
     var scale = "scale(";
     var value = scroly/375 - 1.35;
+    var trans = 10 + scroly/375;
     var endd = ") translateX(10%)";
     var inner = scale + value + endd
     document.getElementById('holder').style.opacity = 3-scroly/375;

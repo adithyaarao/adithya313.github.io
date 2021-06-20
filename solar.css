@@ -1,12 +1,13 @@
 
 
 .galaxy{
-  position: absolute;
-  width: 1400px;
-  height: 700px;
-  left: -700px;
+  position: relative;
+  /*width: 100%;
+  height: 100%;
+  left: -100%;*/
   background-color: inherit;
-  z-index: -2;
+  z-index: 10;
+  background-color: #f5f5f5;
 }
 
 
@@ -14,14 +15,12 @@
 	position: relative;
   height: inherit;
   width: inherit;
-  left: 50%;
-  top: 50%;
-  margin-top: -50%;
-  margin-left: -50%;
+  left: 20%;
+  top: -15%;
 	background-color: transparent;
-  transform: scale(0.65) translateX(10%);
-  transform-origin: 50% 100%;
-  transition: all 0.1s;
+  transform: scale(0.65);
+  transform-origin: left bottom;
+  transition: all 1s;
 }
 
 
@@ -37,10 +36,10 @@
 .sun{
 	width: 150px;
 	height: 150px;
-	position: absolute;
+	position: relative;
+  top: 370px;
+  left: -200px;
 	overflow: hidden;
-	top: 90%;
-	left: 45%;
   border-radius: 50%;
 	background-image: url('sun.png');
 	 background-position: center;
@@ -57,18 +56,17 @@
   position:absolute;
 }
 
-.merc {
-	left:44%;
-  top:88%;
-  height:175px;
-  width:175px;
+.merc {  
+  top: 355px;
+  left: -215.5px;
+  height:180px;
+  width:180px;
     -webkit-animation: rotation 1.5s infinite linear;
   animation: rotation 1.5s infinite linear;
 }
 
 .mercury{
 	position:absolute;
-	z-index:100;
   border-radius:50%;
   border:  1px solid black;
   background-color: yellow;
@@ -81,8 +79,8 @@
 }
 
 .ven{
-	left:41.75%;
-  top:83.5%;
+  top: 330px;
+  left: -240px;
   height:235px;
   width:235px;
     -webkit-animation: rotation 2s infinite linear;
@@ -91,18 +89,17 @@
 
 .venus{
 	position:absolute;
-	z-index:100;
   border-radius:50%;
   background: linear-gradient(-30deg, yellow 40%, orange 50%, red 70%);
   left: 65px;
-  top: 0px;
+  top: -5px;
   height:20px;
   width:20px;
 }
 
 .e{
-	left:37.5%;
-  top:75%;
+  top: 270px;
+  left: -290px;
   height:350px;
   width:350px;
     -webkit-animation: rotation 3s infinite linear;
@@ -137,7 +134,6 @@
 
 .moon{
 	position:absolute;
-	z-index:100;
   border-radius:50%;
   background: linear-gradient(-60deg, white 40%, black 70%);
   left: 45px;
@@ -149,8 +145,8 @@
 }
 
 .mar{
-	left:31.5%;
-  top: 62.5%;
+  top: 190px;
+  left: -370.5px;
   height:520px;
   width: 520px;
     -webkit-animation: rotation 4s infinite linear;
@@ -185,7 +181,6 @@
 
 .marmoon{
 	position:absolute;
-	z-index:100;
   border-radius:50%;
   box-shadow: 0px 0px 10px red;
   background: linear-gradient(-60deg, red 40%, orange 70%);
@@ -198,8 +193,8 @@
 }
 
 .jup{
-	left:3%;
-  top:7%;
+  top: -175px;
+  left: -700px;
   height:1320px;
   width: 1320px;
     -webkit-animation: rotation 6s infinite linear;
@@ -234,7 +229,6 @@
 
 .jupmoon{
 	position:absolute;
-	z-index:100;
   border-radius:50%;
   background: linear-gradient(-60deg, green 40%, white 70%);
   left: 73px;

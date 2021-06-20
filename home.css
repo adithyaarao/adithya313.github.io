@@ -1,10 +1,10 @@
 body{
-	overflow-x: hidden ;
+	overflow-x: hidden;
 	background: #f5f5f5;
 	height: 500vh;
 	transition: 0.5s;
-	cursor:  none;
 	overflow: hidden;
+	cursor: none;
 }
 
 .incircle{
@@ -16,11 +16,12 @@ body{
 	z-index: 9999;
   transform:translate(-50%,-50%);
   pointer-events: none;
+  mix-blend-mode: difference;
 }
 
 .pointer{
 	opacity: 0;
-	transition: all 0.5s;
+	transition: opacity 0.5s;
 }
 
 .circblack{
@@ -33,8 +34,8 @@ body{
 
 .outcircle{
 	position: fixed;
-	width: 60px;
-	height: 60px;
+	width: 50px;
+	height: 50px;
 	border-radius: 50%;
 	opacity: 1;
 	background-color: transparent;
@@ -42,10 +43,11 @@ body{
 	z-index: 9998;
   transform:translate(-50%,-50%);
   pointer-events: none;
+  mix-blend-mode: difference;
 }
 
 h1{
-	font-size: calc(0.75em + 1vw);
+	font-size: 1.5em;
 	color: black;	
 	overflow-y: hidden;
 	line-height: 1.5;
@@ -55,12 +57,11 @@ h1{
 
 .typewrite{
 	position: relative;
-	width: 50%;
-	top: 75px;
-	right: -47%;
 	font-family: Montserrat;
 	display: flex;
 	padding: 20px;
+	z-index: 20;
+	transform: translateX(-150px);
 }
 
 
@@ -68,7 +69,7 @@ h1{
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: calc(700px + 50vw);
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
@@ -91,7 +92,7 @@ h1{
 .header{
 	content: "";
 	width: 120vw;
-	height: 70px;
+	height: calc(50px + 2vh);
 	background: black;
 	background: transparent;
 	position: fixed;
@@ -107,7 +108,7 @@ h1{
 .headerhover{
 	content: "";
 	width: 120vw;
-	height: 70px;
+	height: calc(50px + 2vh);
 	background: black;
 	background: transparent;
 	position: fixed;
@@ -138,6 +139,7 @@ h1{
 	font-size: 1em;
 	border: 2px solid #f5f5f5;
 	transition: all 0.2s;
+	cursor: none;
 }
 
 .hb:hover {
@@ -145,16 +147,29 @@ h1{
 	color: #f5f5f5!important;
 }
 
+.incirclehov{
+	width: 15px;
+	height: 15px;
+}
+
+.outcirclehov{
+	width: 65px;
+	height: 65px;
+	background: rgba(245, 245, 245, 1);
+	mix-blend-mode: difference;
+}
+
 .fluidcont{
-	height: 760px;
+	height: calc(700px + 10vh);
 	position: relative;
 	top: -25px;
+	width: 110vw;
 	background-color: #f5f5f5;
 	z-index: -2;
 }
 
 .fluid{
-	width: 110%;
+	width: 100%;
 	height: 90%;
 	float:left;
 	position: relative;
@@ -172,14 +187,14 @@ h1{
 
 
 .fluidtxt{
-	margin-top: 12%;
-	margin-right: 10%; 
-	width: 50%;
+	margin-top: 160px;
+	margin-right: 15%; 
+	width: calc(80% - 40vw);
 	height: 50%;
 	color:white;
 	position: relative;
 	top: -10px;
-	font-size: 5vw;
+	font-size: calc(2em + 1.5vw + 1.5vh);
 	line-height: 1.25;
 	overflow: hidden;
 	font-family: Tangerine;
@@ -194,6 +209,7 @@ h1{
 
 ::-webkit-scrollbar {
   width: 7px;
+  z-index: 9000;
 }
 
 .black::-webkit-scrollbar-track {
@@ -297,11 +313,11 @@ h1{
 }
 
 .lower{
-	height: 700px;
-	width: 100%;
-	background-color: transparent;
-	position: absolute;
-	top: 195%;	
+	position: relative;
+	top: -50px;
+	width: 100vw;
+	height: calc(550px + 10vh);
+	background-color: #f5f5f5;
 }
 
 .flyin{
@@ -313,11 +329,9 @@ h1{
 .phys{
 	width: 40%;
 	font-family: Italianno;
-	font-size: 7em;
+	font-size: 8vw;
 	font-weight: bold;
 	letter-spacing: 0.15em;
-	left: 32%;
-	top: 31.5%;
 	text-align: center;
 }
 
@@ -336,12 +350,12 @@ h1{
 }
 
 .code{
+	left: 30px;
+	top: 35px;
 	width: 18%;
 	font-family: Tangerine;
-	font-size: 7em;
+	font-size: 8vw;
 	font-weight: bold;
-	left: 46%;
-	top: -5%;
 	letter-spacing: 0.05em;
 	transform: translateX(100%) ;
 	z-index: 2;
@@ -360,12 +374,12 @@ h1{
 }
 
 .art{
+	left: -50px;
+	top: 7px;
 	width: 7%;
 	font-family: BioRhyme;
-	font-size: 3.1em;
+	font-size: 3vw;
 	font-weight: bold;
-	left: 38%;
-	top: -21%;
 	transform: translateX(-100%) ;
 	z-index: 5;
 }
@@ -385,12 +399,12 @@ h1{
 }
 
 .photo{
+	left: 50px;
+	top: -30px;
 	width: 28%;
 	font-family: Sanchez;
-	font-size: 3.75em;
+	font-size: 4vw;
 	font-weight: bold;
-	left: 35%;
-	top: -11%;
 	transform: translateX(-100%) ;
 	z-index: 5;
 }
@@ -409,12 +423,12 @@ h1{
 }
 
 .music{
+	left: -70px;
+	top: -30px;
 	width: 12%;
 	font-family: Montserrat;
-	font-size: 3em;
+	font-size: 3vw;
 	font-weight: bold;
-	left: 52%;
-	top: 20%;
 	transform: translateX(100%) ;
 }
 
@@ -433,12 +447,11 @@ h1{
 }
 
 .world{
-	font-size: 10em;
-	top: 20%;
-	left: 7%;
-	z-index: -1;
+	font-size: 10vw;
 	font-weight: bolder;
 	font-family: Montserrat;
+	z-index: 10;
+	margin: 0 auto;
 }
 
 .sk-cube-grid {
@@ -517,4 +530,20 @@ h1{
 .loadholder{
 	position: relative;
 	top: 30%;
+}
+
+.galaxytype{
+	width: 110vw;
+	height: calc(550px + 10vh);
+	background-color: #f5f5f5;
+	z-index: 10;
+	background:  #f5f5f5;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	position: relative;
+	top: -25px;
+}
+
+.invisible{
+	opacity: 0;
 }
