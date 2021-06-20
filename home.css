@@ -17,6 +17,7 @@ body{
   transform:translate(-50%,-50%);
   pointer-events: none;
   mix-blend-mode: difference;
+  transition: height 0.5s, width 0.5s;
 }
 
 .pointer{
@@ -44,6 +45,7 @@ body{
   transform:translate(-50%,-50%);
   pointer-events: none;
   mix-blend-mode: difference;
+  transition: height 0.5s, width 0.5s;
 }
 
 h1{
