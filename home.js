@@ -30,7 +30,7 @@ function scrollheader(){
 window.addEventListener("scroll", (event) => {  
 
     scroly = this.scrollY;
-    if(scroly<10){
+    if(scroly<100){
         document.getElementById('holder').style.opacity = 0;
     }
     else{
