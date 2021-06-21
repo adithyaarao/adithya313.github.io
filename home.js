@@ -1,8 +1,11 @@
+var lag = 200;
+
+
 function changein(){
-    document.getElementById('incircle').style.width = '32px';
-    document.getElementById('incircle').style.height = '32px';
-    document.getElementById('outcircle').style.height = '30px';
-    document.getElementById('outcircle').style.width = '30px';
+    document.getElementById('incircle').style.width = '30px';
+    document.getElementById('incircle').style.height = '30px';
+    document.getElementById('outcircle').style.height = '31px';
+    document.getElementById('outcircle').style.width = '31px';
 }
 
 
@@ -16,8 +19,12 @@ function changeout(){
 
 var hb = document.getElementsByClassName('hb');
 for(i=0;i<hb.length;i++){
-    hb[i].addEventListener('mouseenter', function(e){changein();});
-    hb[i].addEventListener('mouseleave', function(e){changeout();});
+    hb[i].addEventListener('mouseenter', function(e){
+        changein();
+        lag=1;});
+    hb[i].addEventListener('mouseleave', function(e){
+        changeout();
+        lag = 200});
 }
 
 function setouter(x,y){
@@ -28,7 +35,7 @@ function setouter(x,y){
 const onMouseMove = (e) =>{
   document.getElementById('incircle').style.left = e.clientX + 'px';
   document.getElementById('incircle').style.top = e.clientY + 'px';
-  setTimeout(function(){setouter(e.clientX, e.clientY);}, 200);
+  setTimeout(function(){setouter(e.clientX, e.clientY);}, lag);
   document.getElementById('pointer').style.opacity = '1';
 }
 document.addEventListener('mousemove', onMouseMove);
@@ -54,7 +61,6 @@ window.addEventListener("scroll", (event) => {
     scroly = this.scrollY;
     elems = document.getElementsByClassName('hb');
     if(scroly > 100){
-        document.getElementById('holder').style.opacity = 1;
         document.getElementById('header').setAttribute("class", "headerhover");
     	document.getElementById('header').style.background = "#f5f5f5";
     	for(i=0; i<elems.length; i++){
@@ -63,7 +69,6 @@ window.addEventListener("scroll", (event) => {
     	}
     }
     else{
-        document.getElementById('holder').style.opacity = 0;
         document.getElementById('header').setAttribute("class", "header");
     	document.getElementById('header').style.background = "transparent";
     	for(i=0; i<elems.length; i++){
